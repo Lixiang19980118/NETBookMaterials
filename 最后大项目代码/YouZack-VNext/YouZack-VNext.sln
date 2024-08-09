@@ -1,4 +1,4 @@
-﻿
+
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.0.31612.314
@@ -65,9 +65,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BlazorWebAsm1", "BlazorTest
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BlazorMVC1", "BlazorTests\BlazorMVC1\BlazorMVC1.csproj", "{0A027FA9-FD39-4CDB-949B-6DD5D0DC9068}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SearchService.Domain", "SearchService.Domain\SearchService.Domain.csproj", "{82D747A3-3DC1-41C6-B956-81AC7BCFA87D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SearchService.Domain", "SearchService.Domain\SearchService.Domain.csproj", "{82D747A3-3DC1-41C6-B956-81AC7BCFA87D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SearchService.Infrastructure", "SearchService.Infrastructure\SearchService.Infrastructure.csproj", "{5BF64A04-0BFA-4611-844B-395043F7F29A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SearchService.Infrastructure", "SearchService.Infrastructure\SearchService.Infrastructure.csproj", "{5BF64A04-0BFA-4611-844B-395043F7F29A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

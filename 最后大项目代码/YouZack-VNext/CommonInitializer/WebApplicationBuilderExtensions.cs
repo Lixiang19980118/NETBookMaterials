@@ -43,7 +43,7 @@ namespace CommonInitializer
                 //连接字符串如果放到appsettings.json中，会有泄密的风险
                 //如果放到UserSecrets中，每个项目都要配置，很麻烦
                 //因此这里推荐放到环境变量中。
-                string connStr = configuration.GetValue<string>("DefaultDB:ConnStr");
+                string connStr = configuration?.GetValue<string>("DefaultDB:ConnStr")??"";
                 ctx.UseSqlServer(connStr);
             }, assemblies);
 
@@ -52,7 +52,7 @@ namespace CommonInitializer
             //IdentityService项目还需要启用AddIdentityCore
             builder.Services.AddAuthorization();
             builder.Services.AddAuthentication();
-            JWTOptions jwtOpt = configuration.GetSection("JWT").Get<JWTOptions>();
+            JWTOptions jwtOpt = configuration?.GetSection("JWT")?.Get<JWTOptions>()??new JWTOptions();
             builder.Services.AddJWTAuthentication(jwtOpt);
             //启用Swagger中的【Authorize】按钮。这样就不用每个项目的AddSwaggerGen中单独配置了
             builder.Services.Configure<SwaggerGenOptions>(c =>
